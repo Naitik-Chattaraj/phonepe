@@ -1,6 +1,4 @@
 const express = require('express');
-const cors = require('cors');
-app.use(cors());
 const axios = require('axios');
 const sha256 = require('sha256');
 const http = require("http");
@@ -95,7 +93,7 @@ app.get("/redirect-url/:merchantTransactionId", (req, res) => {
                     res.redirect("https://widense.com/payment-status/error")
                 }
                 else if (response.data.code === 'PAYMENT_PENDING'){
-                    window.redirect("https://widense.com/payment-status/error)
+                    window.redirect("https://widense.com/payment-status/error")
                 }
                 else{
                     window.redirect("windense.com/project")
