@@ -27,9 +27,9 @@ app.get("/pay", (req, res) => {
         merchantTransactionId: merchantTransactionId,
         merchantUserId: userId,
         amount: 50000,
-        redirectUrl: `https://localhost:3002/redirect-url/${merchantTransactionId}`,
+        redirectUrl: `https://phonepe-96d9.onrender.com/redirect-url/${merchantTransactionId}`,
         redirectMode: "REDIRECT",
-        ///"callbackUrl": "https://webhook.site/callback-url",
+        callbackUrl: "https://widense.com/payment-success",
         mobileNumber: "9999999999",
         paymentInstrument: {
             type: "PAY_PAGE"
