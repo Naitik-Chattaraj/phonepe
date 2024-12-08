@@ -89,13 +89,13 @@ app.get("/redirect-url/:merchantTransactionId", (req, res) => {
             .then(function (response) {
                 console.log(response.data);
                 if (response.data.code === 'PAYMENT_SUCCESS') {
-                    res.redirect("https://widense.com")
+                    res.redirect("https://widense.com/payment-status/success")
                 }
                 else if (response.data.code === 'PAYMENT_ERROR'){
-                    res.redirect("https://widense.com/contact")
+                    res.redirect("https://widense.com/payment-status/error")
                 }
                 else if (response.data.code === 'PAYMENT_PENDING'){
-                    window.redirect("https://widense.com/pay-here")
+                    window.redirect("https://widense.com/payment-status/error)
                 }
                 else{
                     window.redirect("windense.com/project")
